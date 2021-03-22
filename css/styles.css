@@ -9,6 +9,39 @@
     --logo-color: #000000;  
     --main-color-footer: rgba(255, 255, 255, 0.6);
 }
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: var(--main-color);
   color: var(--primary-text-color);
@@ -22,6 +55,8 @@ body {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     outline: 2px solid tomato;
 }
 
@@ -40,52 +75,104 @@ body {
     width: 1px !important;
     overflow: hidden;
   }
-/* Logo */
-.logo {
+  .page-header.border {
+    border-bottom: 1px solid #ececec;
+  }
+  
+  /* Сайт контейнер */
+  
+  .page-header .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .page-header .logo {
+    margin-right: 93px;
+  }
+  
+  .header-nav {
+    display: inline-flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+  .logo {
+    display: inline-block;
+    color: #000000;
+  
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-}
-.web {
+    text-decoration: none;
+  }
+  
+  .logo-color {
     color: var(--accent-color);
-}
-.studio {
-    color: var(--logo-color);
-}
-.list {
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
-/* site nav */
-.site-nav a {
+  }
+  
+  .logo-colors {
+    color: var(--primary-white-color);
+    background-color: #2f303a; /*временно*/
+  }
+  
+  .link-nav:hover,
+  .link-nav:focus {
+    color: var(--accent-color);
+  }
+  
+  .link-nav {
     color: var(--title-text-color);
+  }
+  
+  .site-nav .link-nav.current {
+    color: var(--accent-color);
+  }
+  
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .auth-nav .item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .site-nav,
+  .auth-nav {
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-.site-nav .link:hover, 
-.site-nav .link:focus {
+  }
+  
+  .link-contacts:hover,
+  .link-contacts:focus {
     color: var(--accent-color);
-}
-.site-nav .link.current {
-      color: var(--accent-color)}
-/* site contact */
-.site-contact a {
-   
-    color:var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-}
-.site-contact .link:hover, .site-contact .link:focus {
-    color: var(--accent-color);
-}
+  }
+  
+  .link-contacts {
+    color: var(--primary-text-color);
+  }
+  
+  .address-list {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .address-list li:not(:last-child) {
+    margin-bottom: 9px;
+  }
+ 
 /* Section */
+
+.section {
+    padding-left: 0px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .section-title {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -94,6 +181,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+   
 }
 /* Hero */
 .hero-title {
@@ -105,6 +193,7 @@ body {
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
    
     outline: 2px solid tomato;
 
@@ -112,6 +201,8 @@ body {
 }
 .hero {
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     background-color: var(--conteiner-bg-color)
 
@@ -126,6 +217,7 @@ margin-top: 0px;
 }
 /* Features */
 .features .title {
+    text-align: center;
     margin-top: 0px;
     color: var(--title-text-color);
     font-weight: 700;
@@ -135,9 +227,11 @@ margin-top: 0px;
 }
 /* team */
 .Team {
-    background-color: var(--secondary-background-color)
+    background-color: var(--secondary-background-color);
+    text-align: center;
 }
 .team-title {
+
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -171,6 +265,9 @@ margin-top: 0px;
     background-color: var(--accent-color);
 }
 .button-link {
+    border-radius: 4px;
+    padding: 6px 22px;
+    min-width: 73px;
   font-weight: 500;
     font-size: 16px;
     line-height: 1.62;

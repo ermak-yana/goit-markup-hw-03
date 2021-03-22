@@ -13,25 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-            <a  class="logo" href="./index.html "><span class="web">Web</span><span class="studio">Studio</span></a>
-            <ul class="site-nav list">
-            <li> <a href="" class="link current">Студия</a> </li> 
-            <li> <a href="./portfolio.html" class="link">Портфолио</a> </li> 
-            <li> <a href="" class="link">Контакты</a> </li> 
-
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-    <ul class="site-contact list">
-    <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-    <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
-     </ul> 
-    </div>
+<body>   
+    <header >
+        <header class="page-header">
+            <div class="container">
+                <nav class="header-nav">
+                    <a href="./index.html" class="logo list"><span class="logo-color">Web</span>Studio</a>
+                    <ul class="site-nav list">
+                        <li class="item"><a href="" class="link-nav current list">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="link-nav list">Портфолио</a></li>
+                        <li class="item"><a href="#contacts" class="link-nav list">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="auth-nav list">
+                    <li class="item"><a href="mailto:info@devstudio.com" class="link-contacts list">info@devstudio.com</a>
+                    </li>
+                    <li class="item"><a href="tel:+380961111111" class="link-contacts list">+380961111111</a></li>
+                </ul>
+            </div>
     </header>
     <main>
     <section class="hero">
@@ -61,7 +60,7 @@
         </ul> 
         </div>
     </section>
-    <section class="features">
+    <section class=" section features">
         <div class="container">
             <h2 class="title">Чем мы занимаемся</h2>
         <ul>
@@ -77,8 +76,9 @@
         </ul>
         </div>
     </section>
-    <section class="Team">
-        <h2 class="team-title">Наша команда</h2>
+    <section class=" section Team">
+        <div class="container">
+            <h2 class="team-title">Наша команда</h2>
         <ul>
             <li>
                 <img src="./images/team/img4.jpg" alt="Игорь Демьяненко" width="270">
@@ -101,6 +101,7 @@
                 <p  class="profession-title">UI Designer</p>
             </li>
         </ul>
+        </div>
     </section>
     </main> 
     <footer class="footer">
